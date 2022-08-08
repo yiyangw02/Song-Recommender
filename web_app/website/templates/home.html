@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+{% block content %}
+<h4 align="center">Mood Description</h4>
+<p>Please provide a brief description for your day! :)</p>
+<form method="POST">
+    <textarea name="description" id="description" class="form-control"></textarea>
+    </br>
+    </br>
+    <p id="prompt">Please rate your day from a scale of 1 to 100!</p>
+    <div class="range-slider">
+        <input name='score' id="score" type="range" value="50" min="1" max="100" oninput="rangevalue.value=value"
+            class="range blue">
+
+    </div>
+    </br>
+    </br>
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}
